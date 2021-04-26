@@ -6,8 +6,8 @@ const puppeteer = require('puppeteer');
   await page.goto('http://localhost:5000/')
   await page.screenshot({ path: 'ya.png' })
   await page.click('button')
-  let element = await page.$('#inside3')
-  let value = await page.evaluate(el => el.classList, element)
+  let element = await page.$x('//div[@id="inside3"]')
+  let value = await page.evaluate(el => el.classList, element[0])
   const zeroClass = value[0]
   console.log(zeroClass)
   if (zeroClass !== 'isActive') {
