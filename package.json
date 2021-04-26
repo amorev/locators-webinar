@@ -2,17 +2,24 @@
   "name": "locators",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "example.js",
+  "dependencies": {
+    "puppeteer": "9.0.0",
+    "serve": "11.3.2"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "devServer": "nodemon smallbackend/index.js"
+    "show": "serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amorev/locators-webinar.git"
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "body-parser": "1.19.0",
-    "express": "4.17.1",
-    "nodemon": "2.0.7",
-    "puppeteer": "5.5.0"
-  }
+  "bugs": {
+    "url": "https://github.com/amorev/locators-webinar/issues"
+  },
+  "homepage": "https://github.com/amorev/locators-webinar#readme"
 }

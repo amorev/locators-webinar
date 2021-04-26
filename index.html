@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Page</title>
+</head>
+<script>
+function onclicbutton() {
+  document.getElementById('inside3').className = 'isActive'
+}
+</script>
+<style>
+    .firstDiv {
+        color: red
+    }
+    .secondDiv {
+        color: blue;
+    }
+    .thirdDiv {
+        color: yellow;
+    }
+    .isActive {
+        font-weight: bold;
+    }
+    .isSecondary {
+        font-style: italic;
+    }
+</style>
+<body>
+<div>
+    <div class="firstDiv isSecondary">inside 1
+        <div class="secondDiv isActive">inside 2
+            <div class="thirdDiv" id="inside3">inside 3</div>
+        </div>
+    </div>
+    <button class="isActive" onclick="onclicbutton()">Button</button>
+</div>
+</body>
+</html>
