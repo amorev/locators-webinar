@@ -7,7 +7,13 @@ const puppeteer = require('puppeteer');
   await page.screenshot({ path: 'ya.png' })
   await page.click('button')
   let element = await page.$('#inside3')
-
-  console.log(element)
+  let value = await page.evaluate(el => el.classList, element)
+  const zeroClass = value[0]
+  console.log(zeroClass)
+  if (zeroClass !== 'isActive') {
+    console.log('error')
+  } else {
+    console.log('success')
+  }
   // await browser.close()
 })()
